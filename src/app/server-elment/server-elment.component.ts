@@ -20,13 +20,11 @@ export class ServerElmentComponent implements OnInit, OnChanges, DoCheck, AfterC
   ngOnChanges(changes: SimpleChanges): void {
     console.log('ngOnChanges called!');
     console.log(changes);
-    console.log('Text content of paragraph' + this.contentParagraph.nativeElement.textContent);
-    
   }
 
   ngOnInit(): void {
     console.log('ngOnInit called!');
-    
+    console.log('Text content of paragraph' + this.contentParagraph.nativeElement.textContent);
   }
 
   ngDoCheck(): void {
