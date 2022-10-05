@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <app-cockpit 
     (srvCreated)="onServerAdded($event)"
     (bpCreated)="onBlueprintAdded($event)"
@@ -17,6 +17,19 @@
           <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
         </p>
       </app-server-elment>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-odd *ngFor="let number of oddNumbers" [oddNumber]="number"></app-odd>
+      <app-even *ngFor="let number of evenNumbers" [evenNumber]="number"></app-even>
     </div>
   </div>
 </div>
